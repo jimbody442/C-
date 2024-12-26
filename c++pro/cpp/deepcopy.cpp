@@ -36,12 +36,12 @@ Photo_Cannon::Photo_Cannon(int x, int y, const char* cannon_name)
 
 
 Photo_Cannon::~Photo_Cannon() {
-	//0ÀÌ ¾Æ´Ñ °ªÀº if¹®¿¡¼­ true·Î Ã³¸®µÇ¹Ç·Î
-	// 0ÀÎÁö ¾Æ´ÑÁö¸¦ ºñ±³ÇÒ ¶§ ±×³É if(name)ÇÏ¸é
-	// if(name!=0)°ú µ¿ÀÏÇÑ ÀÇ¹Ì¸¦ °¡Áú¼ö ÀÖÀ½.
+	//0ì´ ì•„ë‹Œ ê°’ì€ ifë¬¸ì—ì„œ trueë¡œ ì²˜ë¦¬ë˜ë¯€ë¡œ
+	// 0ì¸ì§€ ì•„ë‹Œì§€ë¥¼ ë¹„êµí•  ë•Œ ê·¸ëƒ¥ if(name)í•˜ë©´
+	// if(name!=0)ê³¼ ë™ì¼í•œ ì˜ë¯¸ë¥¼ ê°€ì§ˆìˆ˜ ìžˆìŒ.
 
-	// Âü°í·Î if¹® ´ÙÀ½¿¡ ¹®ÀåÀÌ 1°³¸¸ ¿Â´Ù¸é
-	//Áß°ýÈ£ »ý·« °¡´É.
+	// ì°¸ê³ ë¡œ ifë¬¸ ë‹¤ìŒì— ë¬¸ìž¥ì´ 1ê°œë§Œ ì˜¨ë‹¤ë©´
+	//ì¤‘ê´„í˜¸ ìƒëžµ ê°€ëŠ¥.
 	if (name)
 		delete[] name;
 }
@@ -51,7 +51,7 @@ Photo_Cannon::~Photo_Cannon() {
 
 Photo_Cannon::Photo_Cannon(int x, int y) {
 
-	cout << "»ý¼ºÀÚ È£Ãâ !" << endl;
+	cout << "ìƒì„±ìž í˜¸ì¶œ !" << endl;
 	hp = shield = 100;
 	coord_x = x;
 	coord_y = y;
@@ -61,7 +61,7 @@ Photo_Cannon::Photo_Cannon(int x, int y) {
 }
 
 Photo_Cannon::Photo_Cannon(const Photo_Cannon& pc) {
-	cout << "º¹»ç »ý¼ºÀÚ È£Ãâ!" << endl;
+	cout << "ë³µì‚¬ ìƒì„±ìž í˜¸ì¶œ!" << endl;
 	hp = pc.hp;
 	shield = pc.shield;
 	coord_x = pc.coord_x;
@@ -86,9 +86,9 @@ void Photo_Cannon::show_status() {
 
 
 int main() {
-	Photo_Cannon pc1(3, 3,"Cannon");	//Photo_Cannon(int x, int y, const char*)È£Ãâ
-	//Photo_Cannon(const Photo_Cannon& pc) È£Ãâ
-	Photo_Cannon pc2 = pc1;	//Photo_Cannon(const Photo_Cannon & pc) È£Ãâ À§¿Í °°Àº ÀÇ¹Ì.
+	Photo_Cannon pc1(3, 3,"Cannon");	//Photo_Cannon(int x, int y, const char*)í˜¸ì¶œ
+	//Photo_Cannon(const Photo_Cannon& pc) í˜¸ì¶œ
+	Photo_Cannon pc2 = pc1;	//Photo_Cannon(const Photo_Cannon & pc) í˜¸ì¶œ ìœ„ì™€ ê°™ì€ ì˜ë¯¸.
 
 	pc1.show_status();
 	pc2.show_status();
