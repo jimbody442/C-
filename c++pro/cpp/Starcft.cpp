@@ -4,7 +4,7 @@
 #include <cstring>
 using namespace std;
 
-Marine::Marine() {			//default »ı¼ºÀÚ.
+Marine::Marine() {			//default ìƒì„±ì.
 	hp = 50;
 	coord_x = coord_y = 0;
 	damage = 5;
@@ -12,7 +12,7 @@ Marine::Marine() {			//default »ı¼ºÀÚ.
 	name = NULL;
 }
 
-Marine::Marine(int x, int y, const char* marine_name) {		// ¸Å°³º¯¼ö°¡ ÀÖ´Â »ı¼ºÀÚ.
+Marine::Marine(int x, int y, const char* marine_name) {		// ë§¤ê°œë³€ìˆ˜ê°€ ìˆëŠ” ìƒì„±ì.
 	name = new char[strlen(marine_name) + 1];
 	strcpy(name, marine_name);
 	coord_x = x;
@@ -54,7 +54,7 @@ void Marine::show_status() {
 }
 
 Marine::~Marine() {
-	cout << name << "ÀÇ ¼Ò¸êÀÚ È£Ãâ!" << endl;
+	cout << name << "ì˜ ì†Œë©¸ì í˜¸ì¶œ!" << endl;
 	if (name != NULL)
 	{
 		delete[]name;
