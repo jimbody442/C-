@@ -8,14 +8,14 @@ class string {
 	int len;
 
 public:
-	string(char c, int n);  // ¹®ÀÚ c °¡ n °³ ÀÖ´Â ¹®ÀÚ¿­·Î Á¤ÀÇ
+	string(char c, int n);  // ë¬¸ì c ê°€ n ê°œ ìˆëŠ” ë¬¸ìì—´ë¡œ ì •ì˜
 	string(const char* s);
 	string(const string& s);
 	~string();
 
-	void add_string(const string& s);   // str µÚ¿¡ s ¸¦ ºÙÀÎ´Ù.
-	void copy_string(const string& s);  // str ¿¡ s ¸¦ º¹»çÇÑ´Ù.
-	int strlen();   // ¹®ÀÚ¿­ ±æÀÌ ¸®ÅÏ
+	void add_string(const string& s);   // str ë’¤ì— s ë¥¼ ë¶™ì¸ë‹¤.
+	void copy_string(const string& s);  // str ì— s ë¥¼ ë³µì‚¬í•œë‹¤.
+	int strlen();   // ë¬¸ìì—´ ê¸¸ì´ ë¦¬í„´
 	void show();
 };
 
@@ -75,10 +75,10 @@ int main() {
 	s3.show();
 	s4.show();
 
-	s1.add_string(s2); //ÂüÁ¶·Î º¸³½´Ù. s1ÀÇ str¿¡ s2ÀÇ strÀÇ ¹®ÀÚ¸¦ ºÙÈù´Ù.
+	s1.add_string(s2); //ì°¸ì¡°ë¡œ ë³´ë‚¸ë‹¤. s1ì˜ strì— s2ì˜ strì˜ ë¬¸ìë¥¼ ë¶™íŒë‹¤.
 	s1.show();
 
-	s1.copy_string(s4);	//s1¿¡ s4ÀÇ strÀ» Ä«ÇÇÇÑ´Ù.
+	s1.copy_string(s4);	//s1ì— s4ì˜ strì„ ì¹´í”¼í•œë‹¤.
 	s1.show();
 
 }
