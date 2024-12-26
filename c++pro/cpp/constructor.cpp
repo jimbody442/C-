@@ -1,4 +1,4 @@
-//»ı¼ºÀÚ.
+//ìƒì„±ì.
 #include <iostream>
 
 class Date {
@@ -17,7 +17,7 @@ public:
 
 	void show();
 
-	Date(int year, int month, int day)		//»ı¼ºÀÚ.
+	Date(int year, int month, int day)		//ìƒì„±ì.
 	{
 		year_ = year;
 		month_ = month;
@@ -27,9 +27,9 @@ public:
 };
 
 int main() {
-	Date day(2011, 3, 1);	//ÀÎ½ºÅÏ½º·Î day¸¦ »ı¼ºÇÔ°ú µ¿½Ã¿¡ DateÇÔ¼ö¸¦ ºÎ¸£Áö ¾Ê¾ÒÁö¸¸ °´Ã¼ »ı¼º½Ã ÀÚµ¿À¸·Î È£ÃâµÇ´Â ÇÔ¼ö
-  //Date day(2011,3,1); ¾Ï½ÃÀû ¹æ¹ı
-  //Date day = Date(2012,3,1); ¸í½ÃÀû ¹æ¹ı.
+	Date day(2011, 3, 1);	//ì¸ìŠ¤í„´ìŠ¤ë¡œ dayë¥¼ ìƒì„±í•¨ê³¼ ë™ì‹œì— Dateí•¨ìˆ˜ë¥¼ ë¶€ë¥´ì§€ ì•Šì•˜ì§€ë§Œ ê°ì²´ ìƒì„±ì‹œ ìë™ìœ¼ë¡œ í˜¸ì¶œë˜ëŠ” í•¨ìˆ˜
+  //Date day(2011,3,1); ì•”ì‹œì  ë°©ë²•
+  //Date day = Date(2012,3,1); ëª…ì‹œì  ë°©ë²•.
 
 
 }
