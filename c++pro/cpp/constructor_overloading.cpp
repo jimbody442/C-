@@ -2,21 +2,21 @@
 
 class Date {
 	int year_;
-	int month_;  // 1 ºÎÅÍ 12 ±îÁö.
-	int day_;    // 1 ºÎÅÍ 31 ±îÁö.
+	int month_;  // 1 ë¶€í„° 12 ê¹Œì§€.
+	int day_;    // 1 ë¶€í„° 31 ê¹Œì§€.
 
 public:
 	void showDate();
 	
 	Date() {
-		std::cout << "±âº» »ı¼ºÀÚ È£Ãâ!" << std::endl;
+		std::cout << "ê¸°ë³¸ ìƒì„±ì í˜¸ì¶œ!" << std::endl;
 		year_ = 2012;
 		month_ = 7;
 		day_ = 12;
 	}
 
 	Date(int year, int month, int day) {
-		std::cout << "ÀÎÀÚ 3°³ÀÎ »ı¼ºÀÚ È£Ãâ" << std::endl;
+		std::cout << "ì¸ì 3ê°œì¸ ìƒì„±ì í˜¸ì¶œ" << std::endl;
 		year_ = year;
 		month_ = month;
 		day_ = day;
@@ -24,7 +24,7 @@ public:
 };
 
 void Date::showDate() {
-	std::cout << "¿À´ÃÀº" << year_ << "³â" << month_ << "¿ù" << day_ << "ÀÏ ÀÔ´Ï´Ù." << std::endl;
+	std::cout << "ì˜¤ëŠ˜ì€" << year_ << "ë…„" << month_ << "ì›”" << day_ << "ì¼ ì…ë‹ˆë‹¤." << std::endl;
 }
 
 int main() {
