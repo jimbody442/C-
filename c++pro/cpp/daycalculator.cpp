@@ -38,7 +38,7 @@ public:
 	}
 	void showDate()
 	{
-		cout << year_ << "³â" << month_ << "¿ù" << day_ << "ÀÏ"<<endl;
+		cout << year_ << "Â³Ã¢" << month_ << "Â¿Ã¹" << day_ << "Ã€Ã"<<endl;
 	}
 
 
