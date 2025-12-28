@@ -1,13 +1,15 @@
+//strstrí•¨ìˆ˜ë¥¼ ì‚¬ìš©
+//strstr(ì°¾ìœ¼ë ¤ê³ í•˜ëŠ” ë¬¸ìì—´, ì°¾ê³ ìí•˜ëŠ” ë¬¸ìì—´)
 #include "stdafx.h"
 #include "MyStringEx.h"
 
 CMyStringEx::CMyStringEx()
 {
-	cout << "CMyStringExÀÇ »ı¼ºÀÚ°¡ È£ÃâµÇ¾ú½À´Ï´Ù." << endl;
+	cout << "CMyStringExì˜ ìƒì„±ìê°€ í˜¸ì¶œë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
 }
 CMyStringEx::~CMyStringEx()
 {
-	cout << "CMyStringExÀÇ ¼Ò¸êÀÚ°¡ È£ÃâµÇ¾ú½À´Ï´Ù." << endl;
+	cout << "CMyStringExì˜ ì†Œë©¸ìê°€ í˜¸ì¶œë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
 }
 
 int CMyStringEx::Find(const char* pszParam)
@@ -25,4 +27,5 @@ int CMyStringEx::Find(const char* pszParam)
 	}
 	else
 		return -1;
+
 }
