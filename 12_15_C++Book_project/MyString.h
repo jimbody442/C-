@@ -1,31 +1,29 @@
-//CMyString_3 ~ CMyString_8 ê¹Œì§€ì˜ ì‹¤í–‰ì„ ìœ„í•œ í´ë˜ìŠ¤ ë©¤ë²„ ì •ì˜ 
-
 #pragma once
 class CMyString
 {
 public:
-	//ìƒì„±ìì™€ ì†Œë©¸ì ì„ ì–¸
-	CMyString();	//defaultìƒì„±ì
-	CMyString(const CMyString&);		//ë³µì‚¬ ìƒì„±ì
-	explicit CMyString(const char*pszParam); // ë³€í™˜ ìƒì„±ì
-	CMyString(CMyString&& rhs);	//ì´ë™ ìƒì„±ì
-	~CMyString();	//ì†Œë©¸ì
+	//»ı¼ºÀÚ¿Í ¼Ò¸êÀÚ ¼±¾ğ
+	CMyString();	//default»ı¼ºÀÚ
+	CMyString(const CMyString&);		//º¹»ç »ı¼ºÀÚ
+	explicit CMyString(const char*pszParam); // º¯È¯ »ı¼ºÀÚ
+	CMyString(CMyString&& rhs);	//ÀÌµ¿ »ı¼ºÀÚ
+	~CMyString();	//¼Ò¸êÀÚ
 
 private:
-	//ë¬¸ìì—´ ì €ì¥ì„ ìœ„í•´ ë™ì í• ë‹¹í•œ ë©”ëª¨ë¦¬ë¥¼ ê°€ë¦¬í‚¤ëŠ” í¬ì¸í„°
+	//¹®ÀÚ¿­ ÀúÀåÀ» À§ÇØ µ¿ÀûÇÒ´çÇÑ ¸Ş¸ğ¸®¸¦ °¡¸®Å°´Â Æ÷ÀÎÅÍ
 	char* m_pszData;
 
-	//ì €ì¥ëœ ë¬¸ìì—´ì˜ ê¸¸ì´ ê°’ ì •ìˆ˜í˜• ë³€ìˆ˜
+	//ÀúÀåµÈ ¹®ÀÚ¿­ÀÇ ±æÀÌ °ª Á¤¼öÇü º¯¼ö
 	int m_nLength;
 public:
-	//ë©¤ë²„ í•¨ìˆ˜ ì„ ì–¸
+	//¸â¹ö ÇÔ¼ö ¼±¾ğ
 	int SetString(const char* pszParam);
 	const char* GetString()const;
 	int GetLength() const;
 	int Append(const char* pszParam);
 	void Release();
 	CMyString& operator = (const CMyString&rhs);
-	operator char*()const	//í˜• ë³€í™˜ ì—°ì‚°ì í•¨ìˆ˜ëŠ” í´ë˜ìŠ¤ì˜ ë©¤ë²„ì¼ê²½ìš° í´ë˜ìŠ¤ ë‚´ì—ì„œ ì •ì˜
+	operator char*()const	//Çü º¯È¯ ¿¬»êÀÚ ÇÔ¼ö´Â Å¬·¡½ºÀÇ ¸â¹öÀÏ°æ¿ì Å¬·¡½º ³»¿¡¼­ Á¤ÀÇ
 	{
 		return m_pszData;
 	}
@@ -36,4 +34,5 @@ public:
 	int operator ==(const CMyString& rhs);
 	int operator !=(const CMyString& rhs);
 
+	virtual void OnSetString(char* pszData, int nLength);
 };
